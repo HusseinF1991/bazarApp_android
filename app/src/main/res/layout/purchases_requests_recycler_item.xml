@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:background="@drawable/shopping_cart_recycler_item_background2"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:elevation="5dp">
+
+    <ImageView
+        android:id="@+id/imgRecipeStatusImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/approve_icon"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp" />
+
+    <TextView
+        android:id="@+id/imgRecipeStatusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/imgRecipeStatusImage"
+        android:text="@string/imgRecipeStatusText_PurchasesRequestRecyclerItem"
+        android:textStyle="italic"
+        android:fontFamily="sans-serif-black"
+        android:layout_marginEnd="3dp"
+        android:layout_alignBottom="@+id/imgRecipeStatusImage"
+        android:textColor="@color/colorAccent" />
+
+    <LinearLayout
+        android:id="@+id/llFirstColumn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="15dp"
+        android:layout_below="@+id/imgRecipeStatusImage">
+
+
+        <TextView
+            android:id="@+id/txtShopNameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:text="@string/PurchasesRequestsRecyclerItem_txtShopNameTitle"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtItemsCountTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:padding="3dp"
+            android:text="@string/PurchasesRequestsRecyclerItem_txtItemsCountTitle"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtPaymentMethodTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:padding="3dp"
+            android:text="@string/PurchasesRequestsRecyclerItem_txtPaymentMethodTitle"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtInvoiceCostTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:padding="3dp"
+            android:text="@string/txtInvoiceCostTitle_PurchasesRequestsRecyclerItem"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtPaidAmountTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:padding="3dp"
+            android:text="@string/txtPaidAmountTitle_PurchasesRequestsRecyclerItem"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llSecondColumn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toEndOf="@+id/llFirstColumn"
+        android:layout_below="@+id/imgRecipeStatusImage">
+
+        <TextView
+            android:id="@+id/txtShopName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:padding="3dp"
+            android:text="##########"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtItemsCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:background="#ffffff"
+            android:padding="3dp"
+            android:text="#####"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtPaymentMethod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:background="#ffffff"
+            android:padding="3dp"
+            android:text="#####"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtInvoiceCost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:background="#ffffff"
+            android:padding="3dp"
+            android:text="$$$$$"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtPaidAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:background="#ffffff"
+            android:padding="3dp"
+            android:text="$$$$$"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewHorizontalSeparatorLine"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_alignTop="@+id/llThirdColumn"
+        android:layout_alignBottom="@+id/llThirdColumn"
+        android:layout_marginStart="10dp"
+        android:layout_toStartOf="@+id/llThirdColumn"
+        android:background="#000000" />
+
+
+    <LinearLayout
+        android:id="@+id/llThirdColumn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/imgRecipeStatusImage"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp">
+
+        <ImageView
+            android:id="@+id/imgDisplayItemsOfInvoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_shopping_bag_black" />
+
+        <ImageView
+            android:id="@+id/imgDisplayMessagingOfInvoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ic_baseline_message_black" />
+
+        <ImageView
+            android:id="@+id/imgCallSupport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ic_baseline_local_phone" />
+    </LinearLayout>
+
+
+</RelativeLayout>

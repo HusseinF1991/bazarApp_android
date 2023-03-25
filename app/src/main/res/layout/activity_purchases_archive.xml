@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PurchasesArchiveActivity"
+    android:background="@drawable/action_bar_background3">
+
+
+    <RelativeLayout
+        android:id="@+id/rlActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="15dp">
+
+        <LinearLayout
+            android:id="@+id/llActionBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/imgFinishThisActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05"
+                android:padding="12dp"
+                android:src="@drawable/ic_reply_black" />
+
+
+            <TextView
+                android:id="@+id/txtMainActivityBarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="13dp"
+                android:layout_weight="0.9"
+                android:fontFamily="cursive"
+                android:gravity="center"
+                android:text="@string/ActivitiesHeader_AppName"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+            <ImageView
+                android:id="@+id/imgOptionsForRecipeStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05"
+                android:src="@drawable/ic_baseline_more_vert_black" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutInvoiceDetails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?actionBarSize"
+        android:background="@drawable/background_style"
+        android:elevation="10dp">
+
+
+        <TextView
+            android:id="@+id/txtInvoiceIdTitle"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/PurchasesRequestsActivity_txtInvoiceIdTitle"
+            android:layout_toEndOf="@+id/btnPaginateInvoice_arrowLeft"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_marginStart="3dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtInvoiceId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_toStartOf="@+id/btnPaginateInvoice_arrowRight"
+            android:layout_toEndOf="@+id/txtInvoiceIdTitle"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_marginEnd="3dp" />
+
+        <TextView
+            android:id="@+id/txtInvoiceTotalItemsTitle"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/PurchasesRequestsActivity_txtInvoiceTotalItemsTitle"
+            android:layout_toEndOf="@+id/btnPaginateInvoice_arrowLeft"
+            android:layout_below="@+id/txtInvoiceIdTitle"
+            android:textAlignment="center"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_marginStart="3dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtInvoiceTotalItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_alignTop="@+id/txtInvoiceTotalItemsTitle"
+            android:layout_toStartOf="@+id/btnPaginateInvoice_arrowRight"
+            android:layout_toEndOf="@+id/txtInvoiceTotalItemsTitle"
+            android:layout_below="@+id/txtInvoiceId"
+            android:textAlignment="center"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_marginEnd="3dp" />
+
+        <TextView
+            android:id="@+id/txtInvoiceDateTitle"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/PurchasesRequestsActivity_txtInvoiceDateTitle"
+            android:layout_toEndOf="@+id/btnPaginateInvoice_arrowLeft"
+            android:layout_below="@+id/txtInvoiceTotalItemsTitle"
+            android:textAlignment="center"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_marginStart="3dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtInvoiceDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_below="@+id/txtInvoiceTotalItems"
+            android:layout_toStartOf="@+id/btnPaginateInvoice_arrowRight"
+            android:layout_toEndOf="@+id/txtInvoiceDateTitle"
+            android:textAlignment="center"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_marginEnd="3dp" />
+
+        <TextView
+            android:id="@+id/txtInvoiceTotalCostTitle"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/PurchasesRequestsActivity_txtInvoiceTotalCostTitle"
+            android:layout_below="@+id/txtInvoiceDateTitle"
+            android:layout_toEndOf="@+id/btnPaginateInvoice_arrowLeft"
+            android:textAlignment="center"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_marginStart="3dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtInvoiceTotalCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_below="@+id/txtInvoiceDate"
+            android:layout_toStartOf="@+id/btnPaginateInvoice_arrowRight"
+            android:layout_toEndOf="@+id/txtInvoiceTotalCostTitle"
+            android:textAlignment="center"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_marginEnd="3dp" />
+
+        <TextView
+            android:id="@+id/txtInvoiceTotalPaidAmountTitle"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/PurchasesRequestsActivity_txtInvoiceTotalPaidAmountTitle"
+            android:layout_below="@+id/txtInvoiceTotalCostTitle"
+            android:layout_toEndOf="@+id/btnPaginateInvoice_arrowLeft"
+            android:textAlignment="center"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_marginStart="3dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtInvoiceTotalPaidAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_below="@+id/txtInvoiceTotalCost"
+            android:layout_toStartOf="@+id/btnPaginateInvoice_arrowRight"
+            android:layout_toEndOf="@+id/txtInvoiceTotalPaidAmountTitle"
+            android:textAlignment="center"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_marginEnd="3dp" />
+
+        <TextView
+            android:id="@+id/txtInvoiceStatusOverall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_below="@+id/txtInvoiceTotalPaidAmount"
+            android:layout_toStartOf="@+id/btnPaginateInvoice_arrowRight"
+            android:layout_toEndOf="@+id/btnPaginateInvoice_arrowLeft"
+            android:textAlignment="center"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:textStyle="bold|italic" />
+
+        <Button
+            android:id="@+id/btnPaginateInvoice_arrowRight"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/arrow_right"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="60dp" />
+
+        <Button
+            android:id="@+id/btnPaginateInvoice_arrowLeft"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/arrow_left"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="60dp"
+            android:enabled="true" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerPurchasesArchive"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/txtInvoiceStatusOverall"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar_purchasesArchive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:elevation="15dp" />
+</RelativeLayout>

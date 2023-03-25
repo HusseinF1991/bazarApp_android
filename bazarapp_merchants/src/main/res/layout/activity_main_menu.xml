@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainMenuActivity"
+    android:background="@drawable/action_bar_background3">
+
+    <LinearLayout
+        android:id="@+id/llToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Main menu"
+            android:textSize="25sp"
+            android:fontFamily="cursive"
+            android:textStyle="bold|italic"  />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/llToolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/llFirstLineBtns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btnNewProduct"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:padding="10dp"
+                android:text="New product"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/btn_background2"/>
+
+
+            <Button
+                android:id="@+id/btnProfile"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:padding="10dp"
+                android:text="Profile"
+                android:background="@drawable/btn_background2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llSecondLineBtns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llFirstLineBtns"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btnUpdateProduct"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:padding="10dp"
+                android:text="Update product"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/btn_background2" />
+
+
+            <Button
+                android:id="@+id/btnNewSellsRequests"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:padding="10dp"
+                android:text="Pending sells"
+                android:background="@drawable/btn_background2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llThirdLineBtns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llSecondLineBtns"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btnSellsArchive"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:padding="10dp"
+                android:layout_marginRight="5dp"
+                android:text="Sells archive"
+                android:background="@drawable/btn_background2"/>
+
+
+            <Button
+                android:id="@+id/btnAddBrand"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:padding="10dp"
+                android:text="Brands"
+                android:background="@drawable/btn_background2" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llFourthLineBtns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llThirdLineBtns"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnCategories"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:padding="10dp"
+                android:text="Categories"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/btn_background2" />
+
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:padding="10dp"
+                android:text="Log_out"
+                android:background="@drawable/btn_background2" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</ScrollView>
+</RelativeLayout>

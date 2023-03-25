@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/purchases_requests_recycler_item_background"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="10dp">
+
+
+    <ImageView
+        android:id="@+id/imgRecipeStatusImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/approve_icon"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp"/>
+
+    <TextView
+        android:id="@+id/txtRecipeStatusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/approve_icon"
+        android:layout_toLeftOf="@+id/imgRecipeStatusImage"
+        android:text="APPROVED"
+        android:textStyle="italic"
+        android:fontFamily="sans-serif-black"
+        android:layout_marginRight="3dp"
+        android:layout_alignBottom="@+id/imgRecipeStatusImage"
+        android:textColor="@color/colorAccent"/>
+
+    <TextView
+        android:id="@+id/txtCustomerNameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtCustomerProvinceTitle"
+        android:layout_alignRight="@+id/txtCustomerProvinceTitle"
+        android:layout_marginTop="5dp"
+        android:padding="3dp"
+        android:text="Name : "
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/txtCustomerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="ex:hussein ali rida"
+        android:padding="3dp"
+        android:textStyle="bold"
+        android:background="#ffffff"
+        android:layout_toRightOf="@+id/txtCustomerNameTitle"/>
+
+
+    <TextView
+        android:id="@+id/txtCustomerMobileTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="Mobile : "
+        android:padding="3dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/txtCustomerNameTitle"
+        android:layout_alignRight="@+id/txtCustomerProvinceTitle"
+        android:layout_alignLeft="@+id/txtCustomerProvinceTitle"/>
+
+
+    <TextView
+        android:id="@+id/txtCustomerMobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="07700000000"
+        android:padding="3dp"
+        android:textStyle="bold"
+        android:background="#ffffff"
+        android:layout_toRightOf="@+id/txtCustomerMobileTitle"
+        android:layout_below="@+id/txtCustomerNameTitle"/>
+
+
+
+
+    <TextView
+        android:id="@+id/txtCustomerProvinceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="province : "
+        android:gravity="center"
+        android:padding="3dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/txtCustomerMobileTitle"
+        android:layout_alignBottom="@+id/btnDisplayCustomerLocInMap"
+        android:layout_alignTop="@+id/btnDisplayCustomerLocInMap"/>
+
+
+    <TextView
+        android:id="@+id/txtCustomerProvince"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="province"
+        android:gravity="center"
+        android:padding="3dp"
+        android:textStyle="bold"
+        android:background="#ffffff"
+        android:layout_toRightOf="@+id/txtCustomerProvinceTitle"
+        android:layout_below="@+id/txtCustomerMobile"
+        android:layout_alignBottom="@+id/btnDisplayCustomerLocInMap"
+        android:layout_alignTop="@+id/btnDisplayCustomerLocInMap"/>
+
+    <Button
+        android:id="@+id/btnDisplayCustomerLocInMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="Show in map"
+        android:layout_toRightOf="@+id/txtCustomerProvince"
+        android:layout_below="@+id/txtCustomerMobile"/>
+
+    <TextView
+        android:id="@+id/txtInvoiceNumberTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="Invoice : "
+        android:padding="3dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/txtCustomerProvinceTitle"
+        android:layout_alignRight="@+id/txtCustomerProvinceTitle"
+        android:layout_alignLeft="@+id/txtCustomerProvinceTitle" />
+
+    <TextView
+        android:id="@+id/txtInvoiceNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="#####"
+        android:padding="3dp"
+        android:textStyle="bold"
+        android:background="#ffffff"
+        android:layout_toRightOf="@+id/txtInvoiceNumberTitle"
+        android:layout_alignRight="@+id/txtInvoiceDate"
+        android:layout_below="@+id/txtCustomerProvinceTitle"/>
+
+    <TextView
+        android:id="@+id/txtInvoiceCostTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:padding="3dp"
+        android:text="cost : "
+        android:textStyle="bold"
+        android:layout_below="@+id/txtCustomerProvinceTitle"
+        android:layout_toRightOf="@+id/viewHorizontalSeparatorLine"
+        android:layout_alignRight="@+id/txtPaidAmountTitle"
+        android:layout_alignLeft="@+id/txtPaidAmountTitle"  />
+
+    <TextView
+        android:id="@+id/txtInvoiceCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:padding="3dp"
+        android:text="$$$$$"
+        android:textStyle="bold"
+        android:background="#ffffff"
+        android:layout_below="@+id/txtCustomerProvinceTitle"
+        android:layout_toRightOf="@+id/txtInvoiceCostTitle"/>
+
+    <TextView
+        android:id="@+id/txtInvoiceDateTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="Date : "
+        android:padding="3dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/txtInvoiceNumberTitle"
+        android:layout_alignRight="@+id/txtCustomerProvinceTitle"
+        android:layout_alignLeft="@+id/txtCustomerProvinceTitle"/>
+
+    <TextView
+        android:id="@+id/txtInvoiceDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="yyyy-MM-dd"
+        android:padding="3dp"
+        android:textStyle="bold"
+        android:background="#ffffff"
+        android:layout_toRightOf="@+id/txtInvoiceDateTitle"
+        android:layout_below="@+id/txtInvoiceNumber"/>
+
+    <View
+        android:id="@+id/viewHorizontalSeparatorLine"
+        android:layout_width="1dp"
+        android:layout_height="15dp"
+        android:background="#000000"
+        android:layout_toRightOf="@+id/txtInvoiceNumber"
+        android:layout_alignTop="@+id/txtInvoiceNumber"
+        android:layout_alignBottom="@+id/txtInvoiceDate"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/txtPaidAmountTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="10dp"
+        android:padding="3dp"
+        android:text="Paid amount : "
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/viewHorizontalSeparatorLine"
+        android:layout_below="@+id/txtInvoiceCostTitle"/>
+
+    <TextView
+        android:id="@+id/txtPaidAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:padding="3dp"
+        android:text="$$$$$"
+        android:textStyle="bold"
+        android:background="#ffffff"
+        android:layout_toRightOf="@+id/txtPaidAmountTitle"
+        android:layout_below="@+id/txtInvoiceCost"
+        android:layout_alignRight="@+id/txtInvoiceCost"/>
+
+
+
+    <ImageView
+        android:id="@+id/imgDisplayItemsOfInvoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/txtInvoiceDateTitle"
+        android:src="@drawable/ic_baseline_shopping_bag_black" />
+
+    <ImageView
+        android:id="@+id/imgDisplayMessagingOfInvoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/imgDisplayItemsOfInvoice"
+        android:layout_below="@+id/txtInvoiceDateTitle"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ic_baseline_message_black" />
+
+    <ImageView
+        android:id="@+id/imgCallCustomer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/imgDisplayMessagingOfInvoice"
+        android:layout_below="@+id/txtInvoiceDateTitle"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ic_baseline_local_phone" />
+
+    <ImageView
+        android:id="@+id/imgCancelOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/txtInvoiceDateTitle"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ic_baseline_cancel_black" />
+
+    <ImageView
+        android:id="@+id/imgEditOnOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/imgCancelOrder"
+        android:layout_below="@+id/txtInvoiceDateTitle"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ic_baseline_edit_black" />
+</RelativeLayout>

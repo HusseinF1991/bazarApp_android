@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CategoriesActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/action_bar_background3">
+
+
+        <LinearLayout
+            android:id="@+id/llToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Categories"
+                android:textSize="25sp"
+                android:fontFamily="cursive"
+                android:textStyle="bold|italic"/>
+        </LinearLayout>
+
+
+        <ProgressBar
+            android:id="@+id/categoriesActivityProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:elevation="10dp"/>
+
+
+        <RelativeLayout
+            android:id="@+id/llSub1Category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llMainCategory"
+            android:background="@drawable/category_management_bg"
+            android:padding="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp">
+
+
+            <AutoCompleteTextView
+                android:id="@+id/etxtSub1Cat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sub1CatSpinner"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="14dp"
+                android:layout_marginBottom="10dp"
+                android:enabled="false"
+                android:gravity="center"
+                android:hint="Sub 1 category" />
+
+            <Button
+                android:id="@+id/btnAddSub1Cat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etxtSub1Cat"
+                android:layout_marginBottom="20dp"
+                android:text="add" />
+
+            <Button
+                android:id="@+id/btnUpdateSub1Cat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etxtSub1Cat"
+                android:layout_marginBottom="20dp"
+                android:layout_toRightOf="@+id/btnAddSub1Cat"
+                android:enabled="false"
+                android:text="update" />
+
+            <Button
+                android:id="@+id/btnDeleteSub1Cat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etxtSub1Cat"
+                android:layout_marginBottom="20dp"
+                android:layout_toRightOf="@+id/btnUpdateSub1Cat"
+                android:enabled="false"
+                android:text="remove" />
+
+            <Spinner
+                android:id="@+id/sub1CatSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtSub1CatTitle"
+                android:layout_margin="5dp" />
+
+            <TextView
+                android:id="@+id/txtSub1CatTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="7dp"
+                android:gravity="left"
+                android:text="Sub 1 category"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/txtSub1CatTitle"
+                android:layout_alignRight="@+id/txtSub1CatTitle"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="7dp"
+                android:background="#000000" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/llSub2Category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llSub1Category"
+            android:background="@drawable/category_management_bg"
+            android:padding="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/etxtSub2Cat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sub2CatSpinner"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="14dp"
+                android:layout_marginBottom="10dp"
+                android:enabled="false"
+                android:gravity="center"
+                android:hint="Sub 2 category" />
+
+
+            <Button
+                android:id="@+id/btnAddSub2Cat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etxtSub2Cat"
+                android:layout_marginBottom="20dp"
+                android:text="add" />
+
+
+            <Button
+                android:id="@+id/btnUpdateSub2Cat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etxtSub2Cat"
+                android:layout_marginBottom="20dp"
+                android:layout_toRightOf="@+id/btnAddSub2Cat"
+                android:enabled="false"
+                android:text="update" />
+
+            <Button
+                android:id="@+id/btnDeleteSub2Cat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etxtSub2Cat"
+                android:layout_marginBottom="20dp"
+                android:layout_toRightOf="@+id/btnUpdateSub2Cat"
+                android:enabled="false"
+                android:text="remove" />
+
+
+            <Spinner
+                android:id="@+id/sub2CatSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewSub1CategoryLine"
+                android:layout_margin="5dp" />
+
+            <TextView
+                android:id="@+id/txtSub2CatTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="7dp"
+                android:gravity="left"
+                android:text="Sub 2 category"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/viewSub1CategoryLine"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/txtSub2CatTitle"
+                android:layout_alignRight="@+id/txtSub2CatTitle"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="7dp"
+                android:background="#000000" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/llMainCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llToolbar"
+            android:background="@drawable/category_management_bg"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp">
+
+
+            <AutoCompleteTextView
+                android:id="@+id/etxtMainCat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mainCatSpinner"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="14dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:hint="Main category" />
+
+            <Button
+                android:id="@+id/btnAddMainCat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etxtMainCat"
+                android:layout_marginBottom="20dp"
+                android:text="add" />
+
+            <Button
+                android:id="@+id/btnUpdateMainCat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etxtMainCat"
+                android:layout_marginBottom="20dp"
+                android:layout_toRightOf="@+id/btnAddMainCat"
+                android:enabled="false"
+                android:text="update" />
+
+            <Button
+                android:id="@+id/btnDeleteMainCat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etxtMainCat"
+                android:layout_marginBottom="20dp"
+                android:layout_toRightOf="@+id/btnUpdateMainCat"
+                android:enabled="false"
+                android:text="remove" />
+
+
+            <Spinner
+                android:id="@+id/mainCatSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewMainCategoryLine"
+                android:layout_margin="5dp" />
+
+
+            <TextView
+                android:id="@+id/txtMainCatTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="7dp"
+                android:gravity="left"
+                android:text="Main category"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/viewMainCategoryLine"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/txtMainCatTitle"
+                android:layout_alignRight="@+id/txtMainCatTitle"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="7dp"
+                android:background="#000000" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

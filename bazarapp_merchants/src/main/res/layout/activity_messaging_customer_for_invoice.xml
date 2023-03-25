@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".MessagingCustomerForInvoiceActivity">
+
+
+<LinearLayout
+    android:id="@+id/llActionBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#6c6c6c"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/txtMainActivityBarTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="13dp"
+        android:layout_weight="0.9"
+        android:background="#dcdcdc"
+        android:gravity="center"
+        android:text="MESSAGING"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+
+
+</LinearLayout>
+
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recyclerMessagingCustomer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/llActionBar"
+    android:layout_above="@+id/etxtMessageBody"/>
+
+
+<ProgressBar
+    android:id="@+id/progressBar_MessagingCustomerForInvoiceActivity"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"/>
+
+
+<EditText
+    android:id="@+id/etxtMessageBody"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_toLeftOf="@+id/btnSendMessage"
+    android:hint="اكتب هنا ....."
+    android:singleLine="true"
+    android:layout_marginRight="10dp"
+    android:textAlignment="viewEnd" />
+
+
+<Button
+    android:id="@+id/btnSendMessage"
+    android:layout_width="50dp"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/ic_baseline_send_24" />
+</RelativeLayout>

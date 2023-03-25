@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "948624149967",
+    "project_id": "bazarapp-9456d",
+    "storage_bucket": "bazarapp-9456d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:948624149967:android:7829b63f810ea95d3c16ba",
+        "android_client_info": {
+          "package_name": "com.uruksys.bazarapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "948624149967-8bk7ikqj3e9rpajddo1ro322v6vv0os3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD69BouRzTziEOY8HXVywSSKsshXXx7i9Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "948624149967-8bk7ikqj3e9rpajddo1ro322v6vv0os3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:948624149967:android:882a393c2694e42c3c16ba",
+        "android_client_info": {
+          "package_name": "com.uruksys.bazarapp_merchants"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "948624149967-8bk7ikqj3e9rpajddo1ro322v6vv0os3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD69BouRzTziEOY8HXVywSSKsshXXx7i9Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "948624149967-8bk7ikqj3e9rpajddo1ro322v6vv0os3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

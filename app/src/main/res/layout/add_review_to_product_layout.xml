@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/txtProductName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="@string/txtProductName_addReviewToProductLayout"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="start">
+
+        <TextView
+            android:id="@+id/txtRatingProductTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginEnd="5dp"
+            android:text="@string/txtRatingProductTitle_addReviewToProductLayout"/>
+
+        <ImageView
+            android:id="@+id/imgRatingStar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_star_grey"
+            android:layout_weight="0.2"/>
+
+        <ImageView
+            android:id="@+id/imgRatingStar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_star_grey"
+            android:layout_weight="0.2"/>
+
+        <ImageView
+            android:id="@+id/imgRatingStar3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_star_grey"
+            android:layout_weight="0.2"/>
+
+        <ImageView
+            android:id="@+id/imgRatingStar4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_star_grey"
+            android:layout_weight="0.2"/>
+
+        <ImageView
+            android:id="@+id/imgRatingStar5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_star_grey"
+            android:layout_weight="0.2"/>
+
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/etxtReviewerNickname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:hint="@string/etxtReviewerNickName_Hint_addReviewToProductLayout"
+        android:maxLength="20"/>
+
+    <EditText
+        android:id="@+id/etxtReviewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:hint="@string/etxtReviewTitle_Hint_addReviewToProductLayout"
+        android:maxLength="20"/>
+
+    <EditText
+        android:id="@+id/etxtReviewBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:hint="@string/etxtReviewBody_Hint_addReviewToProductLayout"
+        android:maxLength="60"/>
+
+    <Button
+        android:id="@+id/btnSubmitReview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/add_to_cart_btn_shape"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:text="@string/btnSubmitReview_addReviewToProductLayout"
+        android:padding="8dp"/>
+</LinearLayout>

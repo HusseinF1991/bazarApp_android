@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/rlProductsRecyclerLayoutItem"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="130dp"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/imgProductImageWrapper"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        app:cardCornerRadius="24dp"
+        android:elevation="10dp">
+
+        <ImageView
+            android:id="@+id/imgProductImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_launcher"
+            android:scaleType="fitXY"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/txtProductName"
+        android:layout_marginTop="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="product name"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_below="@+id/imgProductImageWrapper"/>
+    <TextView
+        android:id="@+id/txtProductCode"
+        android:layout_marginTop="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="product name"
+        android:gravity="center"
+        android:layout_below="@+id/txtProductName"/>
+
+</RelativeLayout>

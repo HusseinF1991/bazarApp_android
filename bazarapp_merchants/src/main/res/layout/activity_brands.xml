@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BrandsActivity"
+    android:background="@drawable/action_bar_background3">
+
+
+
+
+    <LinearLayout
+        android:id="@+id/llToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Brands"
+            android:textSize="25sp"
+            android:fontFamily="cursive"
+            android:textStyle="bold|italic"/>
+    </LinearLayout>
+
+    <AutoCompleteTextView
+        android:id="@+id/etxtBrandName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llToolbar"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:hint="Brand name"
+        android:padding="3dp"
+        android:enabled="false"/>
+
+
+    <LinearLayout
+        android:id="@+id/llBrandImg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etxtBrandName"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgBrandImage"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:background="#ffffff"
+            android:padding="1dp"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Choose product image"
+                android:textStyle="bold"
+                android:layout_marginBottom="5dp"/>
+
+            <Button
+                android:id="@+id/btnBrandImg_camera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Camera"
+                android:textStyle="bold"
+                android:enabled="false"
+                android:background="@drawable/btn_background3"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:layout_marginBottom="5dp"/>
+
+            <Button
+                android:id="@+id/btnBrandImg_gallery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_background3"
+                android:text="Studio"
+                android:textStyle="bold"
+                android:enabled="false"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llBrandImg"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp">
+
+        <Button
+            android:id="@+id/btnRemoveBrand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="حذف"
+            android:enabled="false"
+            android:textStyle="bold"
+            android:background="@drawable/btn_background"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <Button
+            android:id="@+id/btnAddNewBrand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:text="اضافة"
+            android:enabled="false"
+            android:textStyle="bold"
+            android:background="@drawable/btn_background"/>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/brandActivityProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>

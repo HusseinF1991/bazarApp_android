@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewProductActivity"
+    android:background="@drawable/action_bar_background3">
+
+    <LinearLayout
+        android:id="@+id/llToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="New product"
+            android:textSize="25sp"
+            android:fontFamily="cursive"
+            android:textStyle="bold|italic"  />
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/llToolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <EditText
+                android:id="@+id/etxtProductCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:gravity="center"
+                android:hint="Product code" />
+
+            <EditText
+                android:id="@+id/etxtProductName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etxtProductCode"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:gravity="center"
+                android:hint="Product name" />
+
+
+            <LinearLayout
+                android:id="@+id/llMultipleOptionsProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/etxtProductName">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerNewProductOptions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/btnAddProductOption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add new option"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imgBrandLogo"
+                android:layout_width="180dp"
+                android:layout_height="0dp"
+                android:layout_below="@+id/spinnerBrands"
+                android:layout_centerHorizontal="true"
+                android:background="#ffffff"
+                android:padding="1dp"
+                android:scaleType="fitXY"
+                android:visibility="invisible" />
+
+            <Spinner
+                android:id="@+id/spinnerBrands"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llMultipleOptionsProduct"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:gravity="center"
+                android:hint="brand" />
+
+            <RelativeLayout
+                android:id="@+id/llProductExpiration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinnerBrands"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnProductExpDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_toLeftOf="@+id/cbProductExp"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:text="No expiration date" />
+
+                <CheckBox
+                    android:id="@+id/cbProductExp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp" />
+            </RelativeLayout>
+
+            <Spinner
+                android:id="@+id/spinnerProductMainCat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llProductExpiration"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:gravity="center"
+                android:hint="Main category" />
+
+
+            <Spinner
+                android:id="@+id/spinnerProductSub1Cat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinnerProductMainCat"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:gravity="center"
+                android:hint="Sub_category 1" />
+
+
+            <Spinner
+                android:id="@+id/spinnerProductSub2Cat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinnerProductSub1Cat"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:gravity="center"
+                android:hint="Sub_category 2" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinnerProductSub2Cat"
+                android:orientation="horizontal"
+                android:layout_marginBottom="5dp">
+
+                <ImageView
+                    android:id="@+id/picbProductImage"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:background="#ffffff"
+                    android:padding="1dp"
+                    android:scaleType="fitCenter" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <Button
+                        android:id="@+id/btnProductImg_camera"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Camera"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btnProductImg_gallery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Studio"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Choose product image"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout1"
+                android:orientation="horizontal"
+                android:layout_marginBottom="5dp">
+
+                <ImageView
+                    android:id="@+id/picbProductImage2"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:background="#ffffff"
+                    android:padding="1dp"
+                    android:scaleType="fitCenter" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btnProductImg_camera2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Camera"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btnProductImg_gallery2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Studio"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Choose product image2"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout2"
+                android:orientation="horizontal"
+                android:layout_marginBottom="5dp">
+
+                <ImageView
+                    android:id="@+id/picbProductImage3"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:background="#ffffff"
+                    android:padding="1dp"
+                    android:scaleType="fitCenter" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btnProductImg_camera3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Camera"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btnProductImg_gallery3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Studio"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Choose product image3"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout3"
+                android:orientation="horizontal"
+                android:layout_marginBottom="5dp">
+
+                <ImageView
+                    android:id="@+id/picbProductImage4"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:background="#ffffff"
+                    android:padding="1dp"
+                    android:scaleType="fitCenter" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btnProductImg_camera4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Camera"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btnProductImg_gallery4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Studio"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Choose product image4"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btnAddProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout4"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="ADD"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:background="@drawable/btn_background"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+    <ProgressBar
+        android:id="@+id/newProductActivityProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+</RelativeLayout>

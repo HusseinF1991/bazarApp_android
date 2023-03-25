@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity"
+    android:background="@drawable/action_bar_background3">
+
+
+    <LinearLayout
+        android:id="@+id/llActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgFinishThisActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.05"
+            android:padding="12dp"
+            android:src="@drawable/ic_reply_black" />
+
+        <TextView
+            android:id="@+id/txtMainActivityBarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="13dp"
+            android:layout_weight="0.9"
+            android:fontFamily="cursive"
+            android:gravity="center"
+            android:text="@string/SettingsActivity_txtMainActivityBarTitle"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/llActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rlGeneralSettings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:elevation="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp"
+                android:background="@drawable/background_style2">
+
+                <TextView
+                    android:id="@+id/txtGeneralSettingTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:text="@string/SettingsActivity_txtGeneralSettingTitle"
+                    android:layout_marginBottom="10dp" />
+
+
+                <TextView
+                    android:id="@+id/txtLanguageSettingTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/SettingsActivity_txtLanguageSettingTitle"
+                    android:layout_below="@+id/txtGeneralSettingTitle" />
+
+                <RadioGroup
+                    android:id="@+id/rGroupLanguageSetting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/txtLanguageSettingTitle"
+                    android:layout_below="@+id/txtGeneralSettingTitle">
+
+                    <RadioButton
+                        android:id="@+id/rBtnEnglishLang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/SettingsActivity_rBtnEnglishLang" />
+
+                    <RadioButton
+                        android:id="@+id/rBtnArabicLang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/SettingsActivity_rBtnArabicLang" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/txtThemeSettingTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/SettingsActivity_txtThemeSettingTitle"
+                    android:layout_below="@+id/rGroupLanguageSetting" />
+
+                <RadioGroup
+                    android:id="@+id/rGroupThemeSetting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/rGroupLanguageSetting"
+                    android:layout_below="@+id/rGroupLanguageSetting">
+
+                    <RadioButton
+                        android:id="@+id/rBtnLightTheme"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/SettingsActivity_rBtnLightTheme"
+                        android:checked="true" />
+                    <RadioButton
+                        android:id="@+id/rBtnDarkTheme"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/SettingsActivity_rBtnDarkTheme"
+                        android:enabled="false"/>
+
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlUserSettings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_below="@+id/rlGeneralSettings">
+
+
+                <TextView
+                    android:id="@+id/txtUserSettingTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:text="@string/SettingsActivity_txtUserSettingTitle"
+                    android:paddingEnd="15dp"
+                    android:paddingStart="15dp"
+                    android:background="#EEEEEE" />
+
+                <RelativeLayout
+                    android:id="@+id/rlUserSettingsFields"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="15dp"
+                    android:paddingStart="15dp"
+                    android:paddingBottom="10dp"
+                    android:layout_below="@+id/txtUserSettingTitle"
+                    android:background="#F2F2F2">
+
+                    <TextView
+                        android:id="@+id/txtUsernameTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/SettingsActivity_txtUsernameTitle"
+                        android:textStyle="bold"
+                        android:maxLength="20" />
+
+                    <TextView
+                        android:id="@+id/txtUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_toEndOf="@+id/txtUsernameTitle"
+                        android:maxLength="20" />
+
+                    <TextView
+                        android:id="@+id/txtCustomerNameTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtUsernameTitle"
+                        android:layout_alignTop="@+id/etxtFullName"
+                        android:layout_alignBottom="@+id/etxtFullName"
+                        android:text="@string/SettingsActivity_txtCustomerNameTitle"
+                        android:textStyle="bold"
+                        android:gravity="center_vertical" />
+
+                    <EditText
+                        android:id="@+id/etxtFullName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_below="@+id/txtUsernameTitle"
+                        android:layout_toEndOf="@+id/txtCustomerNameTitle"
+                        android:maxLength="20" />
+
+
+                    <TextView
+                        android:id="@+id/txtUserGenderTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtCustomerNameTitle"
+                        android:layout_alignBottom="@+id/spinnerGender"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/SettingsActivity_txtUserGenderTitle"
+                        android:gravity="center_vertical"
+                        android:textStyle="bold"
+                        android:maxLength="20" />
+
+
+                    <Spinner
+                        android:id="@+id/spinnerGender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:layout_below="@+id/txtCustomerNameTitle"
+                        android:layout_toEndOf="@+id/txtUserGenderTitle"
+                        android:maxLength="20" />
+
+
+                    <TextView
+                        android:id="@+id/txtUserProvinceTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtUserGenderTitle"
+                        android:layout_alignBottom="@+id/spinnerProvince"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/SettingsActivity_txtUserProvinceTitle"
+                        android:textStyle="bold"
+                        android:gravity="center_vertical"
+                        android:maxLength="20" />
+
+                    <Spinner
+                        android:id="@+id/spinnerProvince"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:layout_toEndOf="@+id/txtUserProvinceTitle"
+                        android:layout_below="@+id/txtUserGenderTitle"
+                        android:maxLength="20" />
+
+
+                    <TextView
+                        android:id="@+id/txtUserRegionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtUserProvinceTitle"
+                        android:layout_alignBottom="@+id/etxtUserRegion"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/SettingsActivity_txtUserRegionTitle"
+                        android:textStyle="bold"
+                        android:gravity="center_vertical"
+                        android:maxLength="20" />
+
+                    <EditText
+                        android:id="@+id/etxtUserRegion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_below="@+id/txtUserProvinceTitle"
+                        android:layout_toEndOf="@+id/txtUserRegionTitle"/>
+
+                    <TextView
+                        android:id="@+id/txtUserMobileTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtUserRegionTitle"
+                        android:layout_alignBottom="@+id/etxtMobile"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/SettingsActivity_txtUserMobileTitle"
+                        android:textStyle="bold"
+                        android:gravity="center_vertical"
+                        android:maxLength="20" />
+
+                    <EditText
+                        android:id="@+id/etxtMobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:inputType="phone"
+                        android:layout_below="@+id/txtUserRegionTitle"
+                        android:layout_toEndOf="@+id/txtUserMobileTitle"
+                        android:maxLength="11" />
+
+                    <TextView
+                        android:id="@+id/txtUserEmailTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtUserMobileTitle"
+                        android:layout_marginTop="7dp"
+                        android:layout_alignBottom="@+id/etxtEmail"
+                        android:text="@string/SettingsActivity_txtUserEmailTitle"
+                        android:textStyle="bold"
+                        android:gravity="center_vertical" />
+
+                    <EditText
+                        android:id="@+id/etxtEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:inputType="textEmailAddress"
+                        android:layout_below="@+id/txtUserMobileTitle"
+                        android:layout_toEndOf="@+id/txtUserEmailTitle"
+                        android:maxLength="20" />
+
+                    <Button
+                        android:id="@+id/btnBirthDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_below="@+id/txtUserEmailTitle"
+                        android:background="@drawable/button_background_shape2"
+                        android:text="@string/GlobalMessage_SelectBirthDate" />
+
+                    <Button
+                        android:id="@+id/btnChangePassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_below="@+id/btnBirthDate"
+                        android:background="@drawable/button_background_shape2"
+                        android:text="@string/SettingsActivity_btnChangePassword" />
+
+                    <Button
+                        android:id="@+id/btnSignOut"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_below="@+id/btnChangePassword"
+                        android:text="@string/SettingsActivity_btnSignOut"
+                        android:background="@drawable/button_background_shape2"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rlRegistering"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_below="@+id/rlUserSettings">
+
+                <TextView
+                    android:id="@+id/txtRegisterSettingTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:text="@string/SettingsActivity_txtRegisterSettingTitle"
+                    android:paddingEnd="15dp"
+                    android:paddingStart="15dp"
+                    android:background="#EEEEEE" />
+
+                <LinearLayout
+                    android:id="@+id/rlRegisterSettingsFields"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="15dp"
+                    android:paddingStart="15dp"
+                    android:paddingBottom="10dp"
+                    android:layout_below="@+id/txtRegisterSettingTitle"
+                    android:background="#F2F2F2"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnSignIn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:layout_marginEnd="5dp"
+                        android:text="@string/SettingsActivity_btnSignIn"
+                        android:background="@drawable/button_background_shape2"/>
+
+                    <Button
+                        android:id="@+id/btnSignUp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/SettingsActivity_btnSignUp"
+                        android:background="@drawable/button_background_shape2"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlSupport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_below="@+id/rlRegistering">
+
+                <TextView
+                    android:id="@+id/txtSupportSettingTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:text="@string/SettingsActivity_txtSupportSettingTitle"
+                    android:paddingEnd="15dp"
+                    android:paddingStart="15dp"
+                    android:background="#EEEEEE" />
+
+                <LinearLayout
+                    android:id="@+id/rlSupportSettingsFields"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="15dp"
+                    android:paddingStart="15dp"
+                    android:paddingBottom="10dp"
+                    android:layout_below="@+id/txtSupportSettingTitle"
+                    android:background="#F2F2F2"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnCallSupport"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:layout_marginEnd="5dp"
+                        android:text="@string/SettingsActivity_btnCallSupport"
+                        android:background="@drawable/button_background_shape2"/>
+
+                    <Button
+                        android:id="@+id/btnMessagingSupport"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/button_background_shape2"
+                        android:text="@string/SettingsActivity_btnMessagingSupport" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnSaveChanges"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:elevation="20dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_below="@+id/rlSupport"
+                android:text="@string/SettingsActivity_btnSaveChanges"
+                android:background="@drawable/button_background_shape"/>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBarSettingsActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:elevation="20dp"
+        android:visibility="invisible"/>
+</RelativeLayout>
